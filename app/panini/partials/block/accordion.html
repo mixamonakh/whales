@@ -1,0 +1,18 @@
+<section class="accordion section-mb">
+    <{{ data.faqs-block.[0].tag-title }} class="section-title">{{ data.faqs-block.[0].title }}</{{ data.faqs-block.[0].tag-title }}>
+    {{#each data.faqs}}
+    <div class="section__item item">
+        <div class="item__button">
+            <{{ data.faqs-block.[0].tag-list }} class="item__name">{{ this.name }}</{{ data.faqs-block.[0].tag-list }}>
+            <span class="item__icon"></span>
+        </div>
+        <div class="item__content">
+            <div class="item__body">
+                <p>
+                    {{ this.text }}
+                </p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</section>

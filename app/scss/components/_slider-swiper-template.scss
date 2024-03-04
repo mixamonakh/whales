@@ -1,0 +1,80 @@
+// ! стили КНОПКИ
+.swiper-button {
+    &-prev,
+    &-next {
+        border: none;
+        position: relative;
+        top: inherit;
+        z-index: 2;
+        margin-top: 0;
+        &::after {
+            font-size: 0;
+            background: url('../icons/arrow-swiper.svg')no-repeat 0%/contain;
+            width: var(--swiper-width-arrow);
+            height: var(--swiper-height-arrow);
+            position: absolute;
+            filter: invert(63%) sepia(13%) saturate(4279%) hue-rotate(122deg) brightness(94%) contrast(102%);
+        }
+    }
+
+    &-prev {
+        left: 0;
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+
+    &-next {
+        right: 0;
+    }
+}
+// ! Неактивная кнопка
+.swiper-button-disabled {
+    opacity: 1 !important;
+    &::after {
+        filter: invert(89%) sepia(81%) saturate(4360%) hue-rotate(189deg) brightness(131%) contrast(100%);
+    }
+}
+// ! стили ПАГИНАЦИИ
+.swiper-pagination-bullet {
+    background-color: var(--swiper-bg-pagination);
+    opacity: 1;
+    margin: 0 2px !important;
+}
+// ! активный элемент ПАГИНАЦИИ
+.swiper-pagination-bullet-active {
+    background-color: var(--swiper-bg-pagination-active);
+}
+// ! позиционрирование ПАГИНАЦИИ
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    top: inherit !important;
+    bottom: var(--swiper-bottom-pagination) !important;
+}
+// ! отступ для корректного отображения ПАГИНАЦИИ
+.swiper-wrapper {
+    padding-bottom: var(--swiper-padding-bottom-pagination);
+}
+
+
+// !xxl
+@media (max-width: 1399px) {}
+
+// !xl
+@media (max-width: 1199px) {}
+
+// !lg
+@media (max-width: 990px) {}
+
+// !md
+@media (max-width: 767px) {
+    // ! отступ для корректного отображения ПАГИНАЦИИ
+    .swiper-wrapper {
+        padding-bottom: var(--swiper-padding-bottom-pagination);
+    }
+}
+
+// !sm
+@media (max-width: 575px) {}

@@ -1,0 +1,50 @@
+.tac {
+    text-align: center;
+}
+.tal {
+    text-align: left;
+}
+.tar {
+    text-align: right;
+}
+.ttu {
+    text-transform: uppercase;
+}
+.ttl {
+    text-transform: lowercase;
+}
+.ttc {
+    text-transform: capitalize;
+}
+.tti {
+    text-transform: inherit;
+}
+.over-h {
+    overflow: hidden;
+}
+.over-u {
+    overflow: unset;
+}
+// md
+@media (max-width: 767px) {
+    .md {
+        &-tac {
+            text-align: center !important;
+        }
+        &-tal {
+            text-align: left !important;
+        }
+        &-tar {
+            text-align: right !important;
+        }
+        &-tti {
+            text-transform: inherit !important;
+        }
+        &-over-h {
+            overflow: hidden !important;
+        }
+        &-over-u {
+            overflow: unset !important;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+input, textarea {
+    background: var(--form-input-background);
+    outline: none;
+    border: var(--form-input-border-width) solid var(--form-input-border-color);
+    border-radius: var(--form-input-border-radius);
+    padding: var(--form-input-padding);
+    width: 100%;
+    color: var(--form-input-color);
+    &::placeholder{
+        color: var(--form-input-color-placeholder);
+        font-weight: 500;
+    }
+}
+textarea {
+    resize: none;
+    height: 100%;
+    min-height: 188px;
+}
+button {
+    outline: none;
+    border: none;
+}
+.form {
+    &__item {
+        margin-bottom: var(--form-item-margin-bottom);
+    }
+    &__button {
+        font-size: var(--form-button-font-size);
+        font-weight: var(--form-button-font-weight);
+        border-radius: var(--form-button-border-radius);
+        color: var(--form-button-color);
+        cursor: pointer;
+        background-color: var(--form-button-backgorund);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        padding: var(--form-button-padding);
+    }
+}

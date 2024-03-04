@@ -1,0 +1,14 @@
+@mixin icon-before( $name, $direction, $width, $height, $margin-direction, $margin-value, $align-items ){
+    display: flex;
+    align-items: $align-items;
+    &:#{$direction}{
+        content: '';
+        display: block;
+        background: url(../icons/#{$name})no-repeat 0%/contain;
+        width: $width;
+        height: $height;
+        flex: 0 0 $width;
+        margin-#{$margin-direction}: $margin-value;
+        @content
+    }
+}

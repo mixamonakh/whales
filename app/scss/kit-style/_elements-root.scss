@@ -1,0 +1,20 @@
+* {
+    font-family: var(--default-font-family);
+}
+body {
+    font-family: '';
+    font-size: var(--body-font-size);
+    font-weight: var(--body-font-weight);
+    background: var(--body-color-background);
+    line-height: var(--body-line-height);
+    color: var(--body-color-text);
+}
+.section-mb {
+    margin-bottom: var(--section-margin-bot);
+}
+a {
+    text-decoration: none;
+}
+main {
+    margin-top: var(--main-margin-top);
+}

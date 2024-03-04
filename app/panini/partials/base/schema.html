@@ -1,0 +1,97 @@
+<!-- schema -->
+
+<!-- mobileapplication -->
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org/",
+        "@type": "MobileApplication",
+        "name": "{{ title }}",
+        "description": "{{ description }}",
+        "mainEntityOfPage": "https://{{ domain }}",
+        "datePublished": "2024-02-02",
+        "dateModified": "2024-02-01",
+        "operatingSystem": "Android",
+        "inLanguage": "{{ lang }}",
+        "offers": { 
+            "type": "Offer", 
+            "price": "0.0", 
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock" 
+        },
+        "author": { 
+            "@type": "website", 
+            "name": "https://"{{ domain }}"" 
+        },
+        "publisher": 
+            { 
+                "@type": "Organization", 
+                "name": "https://{{ domain }}", 
+                "logo": { 
+                    "@type": "ImageObject",  
+                    "url": "{{ domain }}/icons/logo.svg", 
+                    "width": "108", 
+                    "height": "50" 
+                } 
+            },
+        "AggregateRating": { 
+            "@type": "AggregateRating", 
+            "ratingValue": "3", 
+            "ratingCount": 91, 
+            "bestRating": "5" 
+        },
+        "applicationCategory": "GAME_SPORTS",
+        "image": { 
+            "@type": "ImageObject", 
+            "url": "", 
+            "width": "", 
+            "height": "", 
+            "caption": "" 
+        }
+    }
+    
+</script>
+<!-- WebPage -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "{{ domain }}",
+        "description": "{{ description }}"
+    }
+</script>
+<!-- Organization -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "{{ title }}",
+        "url": "https://{{{ domain }}}",
+        "logo": "{{ domain }}/icons/logo.svg",
+        "sameAs": [
+            "social"
+
+        ]
+    }
+</script>
+<!-- Faq -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {{#each data.faqs}}
+            {
+                "@type": "Question",
+                "name": "{{{ this.name }}}",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "{{{ this.text }}}"
+                }
+            }
+        {{#unless @last}},{{/unless}}
+        {{/each}}
+      ]
+    }
+    </script>
+
+<!-- HowTo -->

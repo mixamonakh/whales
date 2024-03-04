@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <meta name="description" content="Description">
+
+    <link rel="preload" href="../css/fonts.css" as="style">
+    <link rel="preload" href="../css/libs-preload.min.css" as="style">
+    <link rel="preload" href="../js/libs.min.js" as="script">
+    <link rel="preload" href="../js/script.js" as="script">
+
+    <link rel="stylesheet" href="../css/kit-style.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Title">
+    <meta name="description" content="Description">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://site.com/">
+    <meta property="og:title" content="Title">
+    <meta property="og:description" content="Description">
+    <meta property="og:image" content="http://site.com/image/first.webp">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://site.com/">
+    <meta property="twitter:title" content="Title">
+    <meta property="twitter:description" content="Description">
+    <meta property="twitter:image" content="http://site.com/image/first.webp">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__box">
+                <a class="menu-btn"></a>
+                <a href="/" class="logo">
+                    <img src="icons/logo.svg" alt="logo">
+                </a>
+                <nav class="menu">
+                    <ul class="ul-unset menu-inner">
+                            <li><a href="#home" class="menu__link">Home</a></li>
+                            <li><a href="#catalog" class="menu__link">Catalog</a></li>
+                            <li><a href="#blog" class="menu__link">Blog</a></li>
+                    </ul>
+                </nav>
+                <ul class="ul-unset menu__socials d-flex d-lg-none align-items-center">
+                    <li style="width: 14px;height: 14px;"><a href="#">
+                            <img src="icons/apple.svg" alt="apple">
+                        </a></li>
+                    <li style="width: 14px;height: 14px;"><a href="#">
+                            <img src="icons/android.svg" alt="android">
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="grid-first-left">
+        <div class="container">
+            <div class="section first-screen">
+                <picture class="first-screen__image">
+                    <source srcset="image/first-mob.webp" media="(max-width: 767px)">
+                    <source srcset="image/first.webp" type="image/webp">
+                    <img src="image/first.webp"  alt="">
+                </picture>
+                <div class="first-screen__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="first-screen__box">
+                                    <h1 class="mb50">Заголовок</h1>
+                                    <a href="#" class="button">Кнопка</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <section class="accordion section-mb">
+            <h2 class="section-title">FAQ</h2>
+            <div class="section__item item">
+                <div class="item__button">
+                    <h4 class="item__name">Летняя Коллекция</h4>
+                    <span class="item__icon"></span>
+                </div>
+                <div class="item__content">
+                    <div class="item__body">
+                        <p>
+                            Свежий взгляд на лето
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="section__item item">
+                <div class="item__button">
+                    <h4 class="item__name">Технические Гаджеты</h4>
+                    <span class="item__icon"></span>
+                </div>
+                <div class="item__content">
+                    <div class="item__body">
+                        <p>
+                            Смарт Технологии
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="review sectiion-mb">
+            <div class="container">
+                <div class="review__head">
+                    <p class="fz32 fw600 text-capitalize mb20 review__title md-text-center">Заголовок</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form action="#" class="form">
+                            <div class="form__item">
+                                <input type="text" placeholder="Nome">
+                            </div>
+                            <div class="form__item">
+                                <input type="email" required placeholder="Email">
+                            </div>
+                            <div class="form__item">
+                                <textarea name="review-text" placeholder="Comente"></textarea>
+                            </div>
+                            <button class="form__button" type="submit">Текст Кнопки</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+        
+                                <!-- CONTENT REVIEW ITEM -->
+        
+                                <div class="swiper-slide">
+                                    <div class="review__item">
+                                        <div class="review__head">
+                                            <p class="review__author">Автор</p>
+                                            <span class="review__quot"></span>
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide">
+                                    <div class="review__item">
+                                        <div class="review__head">
+                                            <p class="review__author">Автор</p>
+                                            <span class="review__quot"></span>
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                </div>
+        
+                            </div>
+                            <div class="box-swiper-buttons">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    </main>
+    <footer class="footer">
+        <div class="container">
+        
+        </div>
+    </footer>    <!-- loadscripts -->
+    <script>
+        setTimeout(() => {
+            loadStyles("css/fonts.css");
+            loadStyles("css/libs-preload.min.css");
+            loadScript("js/libs.min.js")
+                .then(script => loadScript("js/script.js"))
+        }, 1600);
+    
+        function loadStyles(href) {
+            return new Promise(function(resolve, reject) {
+                let link = document.createElement('link');
+                link.href = href;
+                link.rel = "stylesheet"
+                link.type = "text/css"
+                link.onload = () => resolve(link);
+                link.onerror = () => reject(new Error(`Error ${src}`));
+    
+                document.head.append(link);
+            });
+        }
+    
+        function loadScript(src) {
+            return new Promise(function(resolve, reject) {
+                let script = document.createElement('script');
+                script.src = src;
+    
+                script.onload = () => resolve(script);
+                script.onerror = () => reject(new Error(`Error ${src}`));
+    
+                document.head.append(script);
+            });
+        }
+    </script>    <!-- schema -->
+    
+    <!-- mobileapplication -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "MobileApplication",
+            "name": "Title",
+            "description": "Description",
+            "mainEntityOfPage": "https://site.com",
+            "datePublished": "2023-08-02",
+            "dateModified": "2023-08-01",
+            "operatingSystem": "Android",
+            "inLanguage": "en",
+            "offers": { 
+                "type": "Offer", 
+                "price": "0.0", 
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock" 
+            },
+            "author": { 
+                "@type": "website", 
+                "name": "https://"site.com"" 
+            },
+            "publisher": 
+                { 
+                    "@type": "Organization", 
+                    "name": "https://site.com", 
+                    "logo": { 
+                        "@type": "ImageObject",  
+                        "url": "site.com/icons/logo.svg", 
+                        "width": "108", 
+                        "height": "50" 
+                    } 
+                },
+            "AggregateRating": { 
+                "@type": "AggregateRating", 
+                "ratingValue": "3", 
+                "ratingCount": 91, 
+                "bestRating": "5" 
+            },
+            "applicationCategory": "GAME_SPORTS",
+            "image": { 
+                "@type": "ImageObject", 
+                "url": "", 
+                "width": "", 
+                "height": "", 
+                "caption": "" 
+            }
+        }
+        
+    </script>
+    <!-- WebPage -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "site.com",
+            "description": "Description"
+        }
+    </script>
+    <!-- Organization -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Title",
+            "url": "https://site.com",
+            "logo": "site.com/icons/logo.svg",
+            "sameAs": [
+                "social"
+    
+            ]
+        }
+    </script>
+    <!-- Faq -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Летняя Коллекция",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Свежий взгляд на лето"
+                    }
+                }
+            ,
+                {
+                    "@type": "Question",
+                    "name": "Технические Гаджеты",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Смарт Технологии"
+                    }
+                }
+            
+          ]
+        }
+        </script>
+    
+    <!-- HowTo --></body>
+
+</html>

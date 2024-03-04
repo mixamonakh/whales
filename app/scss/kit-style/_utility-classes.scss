@@ -1,0 +1,28 @@
+.ul-unset {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+// !! запретить перенос
+.white-space {
+    white-space: nowrap;
+}
+.italic {
+    font-style: italic;
+}
+// ! назначить количество колонок ul
+.list-2 {
+    columns: 2;
+}
+.list-3 {
+    columns: 3;
+}
+.img {
+    width: 100%;
+}
+.tdu {
+    text-decoration: underline;
+}
+.relative {
+    position: relative;
+}

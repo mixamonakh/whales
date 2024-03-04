@@ -1,0 +1,9 @@
+@mixin nth-last-child-margin($element, $direction, $margin) {
+    #{$element}{
+        margin: 0;
+        margin-#{$direction}: $margin;
+        #{$element}:nth-last-child(1){
+            margin-#{$direction}: 0;
+        }
+    }
+}

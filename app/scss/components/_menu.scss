@@ -1,0 +1,112 @@
+// ! компонент - меню
+.menu {
+    &-inner {
+        display: flex;
+        gap: 5px;
+    }
+    &__socials {
+        li {
+            img {
+                width: 14px;
+                height: 14px;
+            }
+            &:not(:last-child){
+                margin-right: 14px;
+            }
+        }
+    }
+    &__link {
+        color: var(--black);
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1;
+        padding: 8px 4px;
+        
+        white-space: nowrap;
+        background-color: transparent;
+        text-decoration: none;
+        position: relative;
+        text-transform: capitalize;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+// ! кнопка открытия меню (гамбургер)
+.menu-btn {
+    width: 52px;
+    height: 48px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 15px;
+    cursor: pointer;
+    &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: url('../icons/btn-menu.svg')no-repeat 0%/contain;
+    }
+
+    // ! класс активности для преобразования в крестик
+    &.active {
+        &::before {
+            background: url('../icons/btn-menu-active.svg')no-repeat 0%/contain;
+        }
+    } 
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+    .menu-btn {
+        display: flex;
+    }
+    // ! меню уходит за vieport
+    .menu {
+        background-color: #B8BCC1;
+        padding: 20px 20px 48px 20px;
+
+        position: absolute;
+        transform: translateX(-200%);
+        top: 48px;
+        bottom: 0;
+        height: 100vh;
+        z-index: 100;
+        left: 0;
+        border-radius: 0;
+        width: 60%;
+        overflow-y: auto;
+        &-inner {
+            height: auto;
+        }
+        ul {
+            flex-direction: column;
+            width: 100%;
+        }
+        &__link {
+            color: #000;
+            font-size: 14px;
+            line-height: 18px;
+            padding: 8px 10px;
+            
+            justify-content: center;
+            position: static;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        &__buttons {
+            padding: 20px;
+        }
+        // ! меню появляется
+        &.active {
+            transform: translateX(0%);
+        }
+    }
+}
+@media (max-width: 768px) {
+    .menu {
+        width: 100%;
+    }
+} 

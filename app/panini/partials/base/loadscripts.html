@@ -1,0 +1,34 @@
+<!-- loadscripts -->
+<script>
+    setTimeout(() => {
+        loadStyles("css/fonts.css");
+        loadStyles("css/libs-preload.min.css");
+        loadScript("js/libs.min.js")
+            .then(script => loadScript("js/script.js"))
+    }, 1600);
+
+    function loadStyles(href) {
+        return new Promise(function(resolve, reject) {
+            let link = document.createElement('link');
+            link.href = href;
+            link.rel = "stylesheet"
+            link.type = "text/css"
+            link.onload = () => resolve(link);
+            link.onerror = () => reject(new Error(`Error ${src}`));
+
+            document.head.append(link);
+        });
+    }
+
+    function loadScript(src) {
+        return new Promise(function(resolve, reject) {
+            let script = document.createElement('script');
+            script.src = src;
+
+            script.onload = () => resolve(script);
+            script.onerror = () => reject(new Error(`Error ${src}`));
+
+            document.head.append(script);
+        });
+    }
+</script>

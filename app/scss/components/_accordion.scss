@@ -1,0 +1,71 @@
+.item__content {
+    max-height: 0;
+    /* изначально блок свёрнут */
+    overflow: hidden;
+    /* полностью скрывает дочерний блок */
+    transition: max-height var(--transition-def);
+    /* время анимации можно менять по желанию */
+}
+// ! состояния активности пишим тут
+.section__item[data-open="true"] {
+    .item {
+        &__name{
+            color: var(--accordion-item-color-title-active);
+        }
+        &__icon {
+            background: url('../icons/accordion-visible.svg')no-repeat 0%/cover;
+        }
+    }
+}
+// ! отступы между элементами кроме последнего
+.section__item:not(:last-child) {
+    margin-bottom: var(--accordion-item-margin-bottom);
+}
+.section__item {
+    border-bottom: 1px solid var(--yellow-main);
+}
+.accordion {
+    .item {
+        overflow: hidden;
+        // ! блок с заголовком и кнопкой
+        &__button {
+            font-weight: bold;
+            padding: var(--accordion-padding-head);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+            cursor: pointer;
+            background: var(--accordion-item-header-background);
+            transition: 0.6s;
+            gap: 15px;
+        }
+        // ! заголовок
+        &__name {
+            text-transform: capitalize;
+        }
+        // ! иконка
+        &__icon{
+            background: url('../icons/accordion-hidden.svg')no-repeat 0%/contain;
+            width: 30px;
+            height: 30px;
+            flex: 0 0 30px;
+            display: block;
+        }
+        // ! обертка для контента, для плавного появления
+        &__content{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.9s;
+        }
+        // ! блок с контентом
+        &__body {
+            padding: var(--accordion-padding-content);
+            background: var(--accordion-item-content-background);
+            transition: 0.6s;
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

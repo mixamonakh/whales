@@ -1,0 +1,97 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: .1fr 1fr;
+    column-gap: 20px;
+    &__mb{
+        margin-bottom: 20px;
+    }
+    &__1{
+        grid-area: grid__1;
+    }
+    &__2{
+        grid-area: grid__2;
+    }
+    &__3{
+        grid-area: grid__3;
+    }
+}
+
+// Общее для заголовка
+
+.section-title {
+    color: red;
+    margin-bottom: 30px;
+}
+
+// У 1 блока - заголовок справа
+.grid-first-left {
+    section:nth-child(2n + 1) {
+        .grid {
+            grid-template-areas: "grid__3 grid__1" "grid__3 grid__2";
+        }
+        .section-title {
+            text-align: right;
+        }
+    }
+    section:nth-child(2n) {
+        .grid {
+            grid-template-areas: "grid__1 grid__3" "grid__2 grid__3";
+        }
+    }
+}
+// У 1 блока - заголовок слева
+.grid-first-right {
+    section:nth-child(2n) {
+        .grid {
+            grid-template-areas: "grid__3 grid__1" "grid__3 grid__2";
+        }
+        .section-title {
+            text-align: left;
+        }
+    }
+    section:nth-child(2n + 1) {
+        .grid {
+            grid-template-areas: "grid__1 grid__3" "grid__2 grid__3";
+        }
+    }
+}
+// !xxl
+@media (max-width: 1399px) {
+
+}
+// !xl
+@media (max-width: 1199px) {
+
+}
+// !lg
+@media (max-width: 991px) {
+
+}
+// !md
+@media (max-width: 767px) {
+    .section-title {
+        margin-bottom: 20px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: unset !important;
+        &__1 {
+            order: 1;
+        }
+        &__2 {
+            order: 3;
+        }
+        &__3 {
+            order: 2;
+        }
+        & > div {
+            grid-area: unset;
+        }
+    }
+}
+// !sm
+@media (max-width: 575px) {
+
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <meta name="description" content="error 404">
+
+    <link rel="preload" href="../css/fonts.css" as="style">
+    <link rel="preload" href="../css/libs-preload.min.css" as="style">
+    <link rel="preload" href="../js/libs.min.js" as="script">
+    <link rel="preload" href="../js/script.js" as="script">
+
+    <link rel="stylesheet" href="../css/kit-style.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__box py-2">
+                <a href="/" class="logo">
+                    <img src="icons/logo.svg" alt="logo">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="">
+        <section class="error">
+            <picture>
+                <source data-srcset="image/error-mob.webp" srcset="image/error-mob.webp" media="(max-width: 767px)">
+                <source data-srcset="image/error.webp" srcset="image/error.webp" type="image/webp">
+                <img class="lazy" data-src="image/error.webp" srcset="image/error.webp" src="image/error.webp" alt="error">
+            </picture>
+            <div class="error__content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-3">
+                            <p class="fz32 fw900 italic text-uppercase mb20">Algo deu errado!</p>
+                            <p class="fz24 mb25 italic"> A página que você está procurando não existe.</p>
+                            <a href="/" class="error__button">
+                                <img src="icons/btn-error.svg" alt="">
+                                <span class="fw900 italic text-uppercase">Voltar</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    </main>
+    <!-- loadscripts -->
+    <script>
+        setTimeout(() => {
+            loadStyles("css/fonts.css");
+            loadStyles("css/libs-preload.min.css");
+            loadScript("js/libs.min.js")
+                .then(script => loadScript("js/script.js"))
+        }, 1600);
+    
+        function loadStyles(href) {
+            return new Promise(function(resolve, reject) {
+                let link = document.createElement('link');
+                link.href = href;
+                link.rel = "stylesheet"
+                link.type = "text/css"
+                link.onload = () => resolve(link);
+                link.onerror = () => reject(new Error(`Error ${src}`));
+    
+                document.head.append(link);
+            });
+        }
+    
+        function loadScript(src) {
+            return new Promise(function(resolve, reject) {
+                let script = document.createElement('script');
+                script.src = src;
+    
+                script.onload = () => resolve(script);
+                script.onerror = () => reject(new Error(`Error ${src}`));
+    
+                document.head.append(script);
+            });
+        }
+    </script></body>
+
+</html>

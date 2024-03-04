@@ -1,0 +1,25 @@
+<header class="header">
+    <div class="container">
+        <div class="header__box">
+            <a class="menu-btn"></a>
+            <a href="/" class="logo">
+                <img src="icons/logo.svg" alt="logo">
+            </a>
+            <nav class="menu">
+                <ul class="ul-unset menu-inner">
+                    {{#each data.headers}}
+                        <li><a href="#{{this.url}}" class="menu__link">{{this.name}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+            <ul class="ul-unset menu__socials d-flex d-lg-none align-items-center">
+                <li style="width: 14px;height: 14px;"><a href="#">
+                        <img src="icons/apple.svg" alt="apple">
+                    </a></li>
+                <li style="width: 14px;height: 14px;"><a href="#">
+                        <img src="icons/android.svg" alt="android">
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</header>

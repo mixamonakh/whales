@@ -1,0 +1,24 @@
+// ! миксины
+@import 'mixins/nth-last-child-margin';
+@import 'mixins/icon-before';
+
+// ! базовые
+@import 'base/global';
+
+// ! компоненты
+@import 'components/buttons';
+@import 'components/menu';
+@import 'components/accordion';
+@import 'components/review-form';
+@import 'components/form';
+@import 'components/section-grid';
+
+// ! модули
+@import 'module/header';
+@import 'module/footer';
+
+// ! спрайты
+// @import 'sprite-template';
+
+// ! страницы
+@import 'page/home';

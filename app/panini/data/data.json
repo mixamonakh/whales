@@ -1,0 +1,17 @@
+{
+    "headers": [
+      {
+        "url": "home",
+        "name": "Home"
+      },
+      {
+        "url": "catalog",
+        "name": "Catalog"
+      },
+      {
+        "url": "blog",
+        "name": "Blog"
+      }
+    ]
+  }
+  
